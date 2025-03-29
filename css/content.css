@@ -1,0 +1,231 @@
+/* Import Google Fonts */
+
+.content {
+    color: #000;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.625;
+}
+
+.content a {
+    border-bottom: 1px solid #ddd;
+    color: #f15123;
+}
+
+.content a:hover {
+    color: #333;
+}
+
+.content p {
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.content strong {
+    font-weight: 700;
+}
+
+.content ol,
+.content ul {
+    margin: 0 0 26px 40px;
+    padding: 0;
+}
+
+.content ol li {
+    list-style-type: decimal;
+}
+
+.content ul li {
+    list-style-type: disc;
+}
+
+.content ol ol,
+.content ul ul {
+    margin-bottom: 0;
+}
+
+.content blockquote,
+.content blockquote::before {
+    color: #999;
+}
+
+.content blockquote {
+    margin: 40px 40px 24px;
+}
+
+.content blockquote::before {
+    content: "\201C";
+    display: block;
+    font-size: 30px;
+    height: 0;
+    left: -20px;
+    position: relative;
+    top: -10px;
+}
+
+.content cite {
+    font-style: normal;
+}
+
+/* Headings
+--------------------------------------------- */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    color: #333;
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 16px;
+    padding-top: 12px;
+}
+
+.content h1 {
+    font-size: 36px;
+}
+
+.content h2 {
+    font-size: 30px;
+}
+
+.content h3 {
+    font-size: 24px;
+}
+
+.content h4 {
+    font-size: 20px;
+}
+
+.content h5 {
+    font-size: 18px;
+}
+
+.content h6 {
+    font-size: 16px;
+}
+
+/* Tables
+--------------------------------------------- */
+.content table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    line-height: 2;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.content tbody {
+    border-bottom: 1px solid #ddd;
+}
+
+.content th,
+.content td {
+    text-align: left;
+}
+
+.content th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.content td {
+    border-top: 1px solid #ddd;
+    padding: 6px 0;
+}
+
+/*
+Common Classes
+---------------------------------------------------------------------------------------------------- */
+.content img.centered,
+.content .aligncenter {
+    display: block;
+    margin: 0 auto 24px;
+}
+
+.content img.alignnone {
+    margin-bottom: 12px;
+}
+
+.content .alignleft {
+    float: left;
+    text-align: left;
+}
+
+.content .alignright {
+    float: right;
+    text-align: right;
+}
+
+.content img.alignleft,
+.content .wp-caption.alignleft {
+    margin: 0 24px 24px 0;
+}
+
+.content img.alignright,
+.content .wp-caption.alignright {
+    margin: 0 0 24px 24px;
+}
+
+.content .wp-caption-text {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+    box-shadow: inset 0 0 0 1px #ddd;
+    float: left;
+    margin-left: 2.564102564102564%;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+    width: 48.717948717948715%;
+}
+
+.one-third,
+.two-sixths {
+    width: 31.623931623931625%;
+}
+
+.four-sixths,
+.two-thirds {
+    width: 65.81196581196582%;
+}
+
+.one-fourth {
+    width: 23.076923076923077%;
+}
+
+.three-fourths {
+    width: 74.35897435897436%;
+}
+
+.one-sixth {
+    width: 14.52991452991453%;
+}
+
+.five-sixths {
+    width: 82.90598290598291%;
+}
+
+.first {
+    clear: both;
+    margin-left: 0;
+}
