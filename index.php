@@ -33,54 +33,7 @@ $logo = get_theme_mod('custom_logo', get_template_directory_uri() . '/img/logo.j
                         'post_type' => 'zayavka',
                     ]);
 
-                    //                $cards_arr = array();
-                    //
-                    //                if ( have_rows('profiles') ) {
-                    //                    while ( have_rows('profiles') ) { the_row();
-                    //
-                    //                        if(!get_sub_field('fio')) continue;
-                    //
-                    //                        $index = get_sub_field('id');
-                    //                        $photo = get_sub_field('photo');
-                    //                        if(!$photo) $photo = '';
-                    //                        $fio = get_sub_field('fio');
-                    //                        $job = get_sub_field('job');
-                    //                        $attitude = get_sub_field('attitude');
-                    //                        $years_born = get_sub_field('years')['years_born'];
-                    //                        $years_death = get_sub_field('years')['years_death'];
-                    //                        if(!$years_death) $years_death = 'наши дни';
-                    //                        $post = get_sub_field('post');
-                    //                        if(!$post) $post = 'нет';
-                    //                        $station = get_sub_field('station');
-                    //                        if(!$station) $station = 'нет';
-                    //                        $rewards = get_sub_field('rewards');
-                    //                        if(!$rewards) $rewards = 'нет';
-                    //
-                    //                        $map_points = array();
-                    //                        if ( have_rows('map_points') ) {
-                    //                            while (have_rows('map_points')) { the_row();
-                    //                                $map_points[] = get_sub_field('location');
-                    //                            }
-                    //                        }
-                    //
-                    //                        $cards_arr[] = [
-                    //                            'index' => $index,
-                    //                            'photo' => $photo,
-                    //                            'fio' => $fio,
-                    //                            'job' => $job,
-                    //                            'attitude' => $attitude,
-                    //                            'years_born' => $years_born,
-                    //                            'years_death' => $years_death,
-                    //                            'post' => $post,
-                    //                            'station' => $station,
-                    //                            'rewards' => $rewards,
-                    //                            'map_points' => $map_points
-                    //                        ];
-                    //
-                    //                    }
-                    //
-                    //                    shuffle($cards_arr);
-                    //                }
+                    
                     $cards_arr = array();
 
                     foreach ($myposts as $post) {
@@ -200,20 +153,20 @@ $logo = get_theme_mod('custom_logo', get_template_directory_uri() . '/img/logo.j
                         <div class="s-profile-info-subtitle">Звание</div>
                     </div>
                     <div class="s-profile-info-block">
-                        <div class="s-profile-info-block-name"><span>Отношение к ТФТЛ</span></div>
-                        <div class="s-profile-info-block-content attitude">Отношение к ТФТЛ</div>
+                        <div class="s-profile-info-block-name"><span>Отношение к учреждению</span></div>
+                        <div class="s-profile-info-block-content attitude">Отношение к учреждению</div>
                     </div>
                     <div class="s-profile-info-block">
                         <div class="s-profile-info-block-name"><span>Годы жизни</span></div>
                         <div class="s-profile-info-block-content primary years">Годы жизни</div>
                     </div>
                     <div class="s-profile-info-block">
-                        <div class="s-profile-info-block-name"><span>Воинское звание / гражданский</span></div>
-                        <div class="s-profile-info-block-content primary post">Воинское звание / гражданский</div>
+                        <div class="s-profile-info-block-name"><span>Воинское звание / труженик тыла / блокадник</span></div>
+                        <div class="s-profile-info-block-content primary post">Воинское звание / труженик тыла / блокадник</div>
                     </div>
                     <div class="s-profile-info-block">
-                        <div class="s-profile-info-block-name"><span>Воинская должность / труженик тыла </span></div>
-                        <div class="s-profile-info-block-content primary station">Воинская должность / труженик тыла
+                        <div class="s-profile-info-block-name"><span>Воинская должность / профессия / ученая степень </span></div>
+                        <div class="s-profile-info-block-content primary station">Воинская должность / профессия / ученая степень
                         </div>
                     </div>
                     <div class="s-profile-info-block">
@@ -221,8 +174,8 @@ $logo = get_theme_mod('custom_logo', get_template_directory_uri() . '/img/logo.j
                         <div class="s-profile-info-block-content primary rewards">Награды</div>
                     </div>
                     <div class="s-profile-info-block">
-                        <div class="s-profile-info-block-name"><span>Ссылка на карточку в Памяти народа</span></div>
-                        <div class="s-profile-info-block-content primary link">Ссылка на карточку в Памяти народа</div>
+                        <div class="s-profile-info-block-name"><span>Ссылка на Память народа / Рувики / Дорогу памяти</span></div>
+                        <div class="s-profile-info-block-content primary link">Ссылка на Память народа / Рувики / Дорогу памяти</div>
                     </div>
 
                     <div class="s-profile-info-block">
@@ -282,8 +235,8 @@ $logo = get_theme_mod('custom_logo', get_template_directory_uri() . '/img/logo.j
                         <div class="s-profile-info-subtitle">Звание</div>
                     </div>
                     <div class="s-profile-info-block">
-                        <div class="s-profile-info-block-name"><span>Отношение к ТФТЛ</span></div>
-                        <div class="s-profile-info-block-content attitude">Отношение к ТФТЛ</div>
+                        <div class="s-profile-info-block-name"><span>Отношение к учреждению</span></div>
+                        <div class="s-profile-info-block-content attitude">Отношение к учреждению</div>
                     </div>
                     <div class="s-profile-info-block">
                         <div class="s-profile-info-block-name"><span>Годы жизни</span></div>
@@ -302,8 +255,8 @@ $logo = get_theme_mod('custom_logo', get_template_directory_uri() . '/img/logo.j
                         <div class="s-profile-info-block-content primary rewards">Награды</div>
                     </div>
                     <div class="s-profile-info-block">
-                        <div class="s-profile-info-block-name"><span>Ссылка на карточку в Памяти народа</span></div>
-                        <div class="s-profile-info-block-content primary link">Ссылка на карточку в Памяти народа</div>
+                        <div class="s-profile-info-block-name"><span>Ссылка на Память народа / Рувики / Дорогу памяти</span></div>
+                        <div class="s-profile-info-block-content primary link">Ссылка на Память народа / Рувики / Дорогу памяти</div>
                     </div>
                     <div class="s-profile-info-block">
                         <div class="s-profile-info-block-name"><span>Почему эта метка</span></div>
