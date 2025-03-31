@@ -76,6 +76,7 @@ get_header('single');
                     <img src="<?=get_template_directory_uri()?>/img/photo1.jpg" class="photo-option" onclick="selectPhoto(this)" alt="">
                     <img src="<?=get_template_directory_uri()?>/img/photo2.jpg" class="photo-option" onclick="selectPhoto(this)">
                     <img src="<?=get_template_directory_uri()?>/img/photo3.jpg" class="photo-option" onclick="selectPhoto(this)">
+                    <img src="<?=get_template_directory_uri()?>/img/photo4.jpg" class="photo-option" onclick="selectPhoto(this)">
                     <canvas id="canvas"></canvas>
                     <div id="remove-photo" style="display: none; cursor: pointer;" onclick="removeCustomPhoto()">✖</div>
                 </div>

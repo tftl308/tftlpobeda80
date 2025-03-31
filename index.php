@@ -49,7 +49,7 @@ $logo = get_theme_mod('custom_logo', get_template_directory_uri() . '/img/logo.j
                         $awards = get_post_meta($post->ID, 'awards', true);
                         $history = get_post_meta($post->ID, 'history', true);
                         $coords = get_post_meta($post->ID, 'coords', true);
-                        $descriptionCoords = get_post_meta($post->ID, 'descriptionCoords', true);
+                        $descriptionCoords = get_post_meta($post->ID, 'label', true);
                         $photo = get_post_meta($post->ID, 'photo', true);
                         $photos = get_post_meta($post->ID, 'photos', true);
 
@@ -111,12 +111,12 @@ $logo = get_theme_mod('custom_logo', get_template_directory_uri() . '/img/logo.j
                                         "<div class=\"s-profile-info-title\"><?php echo get_the_title($card['index']); ?></div>" +
                                         "<div class=\"s-profile-info-subtitle\"><?php echo addslashes($card['job']); ?></div>" +
                                         "<div class=\"s-profile-info-link\"><?php echo addslashes($card['link']); ?></div>" +
-                                        "<div class=\"s-profile-info-att\"><?php echo str_replace(array('\r\n', '\r', '\n', ';'), '', addslashes($card['attitude'])); ?></div>" +
+                                        "<div class=\"s-profile-info-att\"><?php echo str_replace(array("\r\n","\r", "\n", ";"), '<br>', addslashes($card['attitude'])); ?></div>" +
                                         "<div class=\"s-profile-info-years\"><?php echo addslashes($card['years']) ?></div>" +
                                         "<div class=\"s-profile-info-post\"><?php echo addslashes($card['job']); ?></div>" +
                                         "<div class=\"s-profile-info-station\"><?php echo addslashes($card['station']); ?></div>" +
-                                        "<div class=\"s-profile-info-description\"><?php echo addslashes($card['description']); ?></div>" +
-                                        "<div class=\"s-profile-info-rewards\"><?php echo str_replace(array('\r\n', '\r', '\n', ';'), '', addslashes($card['rewards'])); ?></div>" +
+                                        "<div class=\"s-profile-info-description\">Отмечено на карте: <?php echo addslashes($card['description']); ?></div>" +
+                                        "<div class=\"s-profile-info-rewards\"><?php echo str_replace(array("\r\n","\r", "\n", ";"), '<br>', addslashes($card['rewards'])); ?></div>" +
                                         "</div>" +
                                         "</div>";
 
