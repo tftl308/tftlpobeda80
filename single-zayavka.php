@@ -161,9 +161,9 @@ $p_info = get_post_meta($post->ID, 'history', true) ?: "Дополнительн
 
     <script>
         // fix images
-        $('.content img').each((index, elem) => {
-            $(elem).attr('src', $(elem).attr('srcset').split(', ')[$(elem).attr('srcset').split(', ').length - 1].split(' ')[0]);
-        });
+        // $('.content img').each((index, elem) => {
+        //     $(elem).attr('src', $(elem).attr('srcset').split(', ')[$(elem).attr('srcset').split(', ').length - 1].split(' ')[0]);
+        // });
 
         $('.content img').not('.blocks-gallery-grid img').each((index, elem) => {
             new Viewer(elem, {navbar: false});

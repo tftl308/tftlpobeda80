@@ -103,7 +103,21 @@ function create_custom_post_type()
 
 add_action('init', 'create_custom_post_type');
 
+class DFileHelper
+{
+    public static function getRandomFileName($path, $extension = '')
+    {
+        $extension = $extension ? '.' . $extension : '';
+        $path = $path ? $path . '/' : '';
 
+        do {
+            $name = md5(microtime() . rand(0, 9999));
+            $file = $path . $name . $extension;
+        } while (file_exists($file));
+
+        return $name;
+    }
+}
 
 add_action('wp_ajax_submit_application', 'submit_application');
 add_action('wp_ajax_nopriv_submit_application', 'submit_application');
@@ -165,12 +179,14 @@ function submit_application()
         $photo = $_FILES['photo'];
         if ($photo['error'] === UPLOAD_ERR_OK) {
             $upload_dir = wp_upload_dir();
-            $target_file = $upload_dir['path'] . '/' . basename($photo['name']);
-            move_uploaded_file($photo['tmp_name'], $target_file);
+            $extension = pathinfo($photo['name'], PATHINFO_EXTENSION);
+            $randomFileName = DFileHelper::getRandomFileName($upload_dir['path'], $extension);
+            $target_file = $upload_dir['path'] . '/' . $randomFileName;
 
-            $file_url = $upload_dir['url'] . '/' . basename($photo['name']);
-
-            update_post_meta($post_id, 'photo', $file_url);
+            if (move_uploaded_file($photo['tmp_name'], $target_file)) {
+                $file_url = $upload_dir['url'] . '/' . $randomFileName;
+                update_post_meta($post_id, 'photo', $file_url);
+            }
         }
     }
 
@@ -185,11 +201,14 @@ function submit_application()
         foreach ($files['name'] as $key => $name) {
             if ($files['error'][$key] === UPLOAD_ERR_OK) {
                 $upload_dir = wp_upload_dir();
-                $target_file = $upload_dir['path'] . '/' . basename($name);
-                move_uploaded_file($files['tmp_name'][$key], $target_file);
+                $extension = pathinfo($name, PATHINFO_EXTENSION);
+                $randomFileName = DFileHelper::getRandomFileName($upload_dir['path'], $extension);
+                $target_file = $upload_dir['path'] . '/' . $randomFileName;
 
-                $file_url = $upload_dir['url'] . '/' . basename($name);
-                $gallery_images[] = $file_url;
+                if (move_uploaded_file($files['tmp_name'][$key], $target_file)) {
+                    $file_url = $upload_dir['url'] . '/' . $randomFileName;
+                    $gallery_images[] = $file_url;
+                }
             }
         }
 

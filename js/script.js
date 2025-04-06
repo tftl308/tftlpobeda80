@@ -42,14 +42,14 @@ function profiles_list_show_profile(profile_box, parent_box = $('.profiles-s-sec
         parent_box.find('.profile-popup-bottom .s-profile-info-block-content.rewards').html($(profile_box).find('.s-profile-info-rewards').html());
         parent_box.find('.profile-popup-bottom .s-profile-info-block-content.attitude').html($(profile_box).find('.s-profile-info-att').html());
 
-        const href = parent_box.find('.profile-popup-bottom .btn.more').attr('data-href');
-        const new_href = href + (href.includes('?') ? '&' : '?') + 'profile_id=' + $(profile_box).attr('data-profile-id');
+        const href = $(profile_box).attr('data-href');
+        const new_href = href;
+
         parent_box.find('.profile-popup-bottom .btn.more').attr('href', new_href);
         parent_box.find('.profile-popup-bottom .btn.share').attr('data-url', new_href).attr('data-fio', $(profile_box).find('.s-profile-info-title').html());
 
-
-        parent_box.find('.profile-popup-top').addClass('opened').css({opacity: 1}).animate({bottom: '70%'}, 400);
-        parent_box.find('.profile-popup-bottom').animate({top: '30%'}, 400);
+        parent_box.find('.profile-popup-top').addClass('opened').css({ opacity: 1 }).animate({ bottom: '70%' }, 400);
+        parent_box.find('.profile-popup-bottom').animate({ top: '30%' }, 400);
     }
 }
 
