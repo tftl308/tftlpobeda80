@@ -79,9 +79,9 @@ $logo = get_theme_mod('custom_logo', get_template_directory_uri() . '/img/logo.j
 
                     if (count($cards_arr) != 0):
 
-                        foreach ($cards_arr as $card) : var_dump($card); ?>
+                        foreach ($cards_arr as $card) : ?>
 
-                            <div class="s-profile-box" data-profile-id="<?php echo $card['index']; ?>">
+                            <div class="s-profile-box" data-profile-id="<?php echo $card['index']; ?>" data-href="<?php echo esc_url(get_permalink($card['index'])); ?>">
                                 <div class="s-profile-photo"
                                      <?php if ($card['photo']): ?>style="background-image: url('<?php echo $card['photo']; ?>')"<?php endif; ?>></div>
                                 <div class="s-profile-info">
@@ -201,8 +201,7 @@ $logo = get_theme_mod('custom_logo', get_template_directory_uri() . '/img/logo.j
                         <span class="btn-icon-box"><i class="fas fa-info-circle"></i></span>
                         <span>Подробнее</span>
                     </a>
-                    <a class="btn share"
-                       onclick="share_dialog('<?php echo esc_url($post_link); ?>', '<?php echo esc_attr($card['fio']); ?>')">
+                    <a class="btn share">
                         <span class="btn-icon-box"><i class="fas fa-share"></i></span>
                         <span>Поделиться</span>
                     </a>
@@ -314,6 +313,15 @@ $logo = get_theme_mod('custom_logo', get_template_directory_uri() . '/img/logo.j
     </div>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.btn.share').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    const link = this.getAttribute('data-url');
+                    const name = this.getAttribute('data-fio');
+                    share_dialog(link, name);
+                });
+            });
+        });
 
         function intro_instruction() {
             $('.profile-popup-top').removeClass('opened').animate({bottom: '100%'}, 400, 'swing', () => {
