@@ -92,7 +92,7 @@ get_header('single');
 
             </div>
             <label class="form-item">
-                <input name="attitude" type="text" class="required" placeholder="Прадедушка Иванова Ивана">
+                <input name="attitude" type="text" class="required" placeholder="Прадедушка ученика Иванова Ивана \ бабушка учителя химии Ивановой Инны Ивановны">
                 <span class="description">Отношение к Образовательному учреждению</span>
             </label>
             <label class="form-item">
@@ -100,12 +100,12 @@ get_header('single');
                 <span class="description">Годы жизни</span>
             </label>
             <label class="form-item">
-                <input name="rank" type="text" class="required" placeholder="Сержант / гражданский">
-                <span class="description">Воинское звание / гражданский</span>
+                <input name="rank" type="text" class="required" placeholder="Сержант / труженник тыла">
+                <span class="description">Воинское звание / труженник тыла / житель блокадного Ленинграда</span>
             </label>
             <label class="form-item">
-                <input name="position" type="text" class="required" placeholder="Командиров средних танков / труженик тыла / житель блокадного города">
-                <span class="description">Воинская должность / труженик тыла / житель блокадного города</span>
+                <input name="position" type="text" class="required" placeholder="Командиров средних танков / инженер завода / доктор медицинских наук">
+                <span class="description">Воинская должность / профессия / ученая степень</span>
             </label>
 
             <div id="map" style="width: 100%; height: 400px;"></div>
@@ -118,7 +118,7 @@ get_header('single');
 
             <label class="form-item">
                 <input name="link" type="text" placeholder="Укажите ссылку">
-                <span class="description">Ссылка на карточку в Памяти народа</span>
+                <span class="description">Ссылка на карточку в Памяти народа / Дороже жизни / РуВики</span>
             </label>
             <label class="form-item">
                     <textarea name="awards"  id="" cols="30" rows="10" placeholder="Укажите награды"></textarea>
