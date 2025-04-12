@@ -1,6 +1,6 @@
 <?php
-$footer = get_theme_mod('project_info', '© Проект Томского физико-технического лицея<br>Если вы нашли ошибку или хотите связаться с модераторами, пишите на адрес - tftl308@ya.ru');
-$footer_min = get_theme_mod('additional_setting', '© Проект ТФТЛ <br>Связь с модерацией - tftl308@ya.ru');
+$footer = get_theme_mod('project_info', '© Проект учителя Томского физико-технического лицея<br>Если вы нашли ошибку или хотите связаться с модераторами, пишите на адрес - tftlpobeda80@yandex.ru');
+$footer_min = get_theme_mod('additional_setting', '© Проект учителя ТФТЛ <br>Связь с модерацией - tftlpobeda80@yandex.ru');
 
 ?>
 
@@ -113,9 +113,9 @@ $footer_min = get_theme_mod('additional_setting', '© Проект ТФТЛ <br>
 
 
                     const text = 'Я помню, я горжусь!';
-                    const title = fio + ' - 75 лет победы ТФТЛ';
-                    const hashtags = ['75летпобеды', 'деньпобеды', '9мая'];
-                    const hashtags_w = ['#75летпобеды', '#деньпобеды', '#9мая'];
+                    const title = fio + ' - 80 лет победы ТФТЛ';
+                    const hashtags = ['80летпобеды', 'деньпобеды', '9мая'];
+                    const hashtags_w = ['#80летпобеды', '#деньпобеды', '#9мая'];
 
                     $('.sdb-link-sharer-input').val(url);
                     $('.sdb-soc-box').attr('data-url', url);
